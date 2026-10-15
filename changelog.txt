@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2026-10-15
+  Features:
+    - Updated to Factorio 2.1
+    - Added a startup setting to configure the maximum number of item sprites drawn on inserter hands (default 250, previously hardcoded).
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2024-12-06
   Compatibility:

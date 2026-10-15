@@ -2,8 +2,10 @@ local INFINITY_ROUNDED_DOWN                                           = 250     
 local STACKINSERTERMODS                                               = {"space-age", "stack-inserters"}
 local HAS_SPACE_AGE                                                   = mods["space-age"] ~= nil
 
+local MAX_SPRITES = settings.startup["infinite-belt-stacking-inserter-hand-stack-max-sprites"].value --[[@as number]]
+
 data.raw["utility-constants"].default.max_belt_stack_size             = INFINITY_ROUNDED_DOWN
-data.raw["utility-constants"].default.inserter_hand_stack_max_sprites = INFINITY_ROUNDED_DOWN
+data.raw["utility-constants"].default.inserter_hand_stack_max_sprites = math.min(MAX_SPRITES, INFINITY_ROUNDED_DOWN)
 
 local HAS_STACK_INSERTER_MOD = false
 for _, mod in ipairs(STACKINSERTERMODS) do
